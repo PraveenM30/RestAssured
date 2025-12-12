@@ -1,0 +1,21 @@
+package Authorization;
+import static io.restassured.RestAssured.given;
+import org.testng.annotations.Test;
+
+public class BearerToken {
+
+	@Test
+	public void bearer() {
+		String token="eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJNODJhX1U2VHRFSnFvWV9jdzNfWi1KaWVoZ2hQcjJ4QjVMbnlNZ3RtRGs0In0.eyJleHAiOjE3NDU4OTE4NzcsImlhdCI6MTc0NTg5MTI3NywianRpIjoiM2I1ZDg2M2ItYjBlYi00NDk0LWJiYWEtYzM4OTc2MjQzNzAwIiwiaXNzIjoiaHR0cHM6Ly9hcHAuZmlyZWZsaW5rLmNvbTozMTAwMS9yZWFsbXMvRmlyZUZsaW5rIiwic3ViIjoiZjphZjhmZmUyYS1jMTIyLTQ3ZjAtOTIxYS01ODgyODcwMjVjZmM6cG9vamEuZ0BmaXJlZmxpbmsuY29tIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiZmxpbmstc2VydmljZSIsInNlc3Npb25fc3RhdGUiOiJjOWE4N2RjYS0xNzg4LTQ2MGYtOWM3Yy1lNWI0NzBmOWQzMjQiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIioiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6ImM5YTg3ZGNhLTE3ODgtNDYwZi05YzdjLWU1YjQ3MGY5ZDMyNCIsImN1cnJlbnRMaWNlbnNlSWQiOiJMSUM5MDY1IiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJjdXJyZW50UHJpdmlsZWdlIjoiQWRtaW4iLCJmdWxsTmFtZSI6InBvb2phIiwiYWN0aXZhdGlvblN0YXR1cyI6IkFDVElWRSIsInByaXZpbGVnZSI6IkFkbWluIiwibGljZW5zZU5hbWUiOiJmaXJlLWZsaW5rLUxJQzkwNjUiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJwb29qYSIsInVzZXJOYW1lIjoicG9vamEuZ0BmaXJlZmxpbmsuY29tIiwiYmlsbGluZ0N5Y2xlIjoiWWVhcmx5IiwiaWQiOiJVU1IxNDgwNyIsImxpY2Vuc2VJZCI6IkxJQzkwNjUiLCJlbWFpbCI6InBvb2phLmdAZmlyZWZsaW5rLmNvbSJ9.LUwZOTatbxSGzJUy8oD4MXoIlpbCeoPbsYD8fwt1-RchaTyyil5_AelmH_ZoU0jZY5B8J74U2HPay9wTlD47Ap_Ixj0wUgQxMyRIhJ4AFcaUKa6rIh8hikHkjB0j2AdjQ4VhJFa5Du4IWYXew5bkomUxsDtLFkyY64H764yy-HeGMAESPWcHs8pUimxGrg3BC0fRy4DbPznVPMsafhUvwh_yVkAGvCfEiaxxo8lcbLJm8fmyHCIydUa8lI0ORIGikQ6iiQQJiv3fBHyz82sDW5L6uhesCwB0IPaircnI2mpe7L7PefCvonH8Nc5llrtCtoPAIqA3z0AhzAN7n17ccg";
+		given()
+		  .headers("Authorization","Bearer "+token)
+		  .header("Content-Type","multipart/form-data; boundary=<calculated when request is sent>")
+		  .multiPart("data","{\"name\":\"test2\",\"type\":\"Web\",\"url\":\"\"}")
+		.when()
+		  .post("https://backend1.fireflink.com/project/optimize/v1/projects/")
+		.then()
+		  .statusCode(200)
+		  .log().body();
+	}
+	
+}
