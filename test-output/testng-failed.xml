@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Authorization.API_Key">
+      <class name="A_RestAssured_RahulShetty.JIRA_API.JIRAcrud">
         <methods>
-          <include name="apiKey_RH"/>
+          <include name="CreateIssue"/>
         </methods>
-      </class> <!-- Authorization.API_Key -->
+      </class> <!-- A_RestAssured_RahulShetty.JIRA_API.JIRAcrud -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

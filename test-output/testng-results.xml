@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-11T12:48:10 IST" name="Default suite" finished-at="2025-12-11T12:48:12 IST" duration-ms="2325">
+  <suite started-at="2025-12-15T16:36:32 IST" name="Default suite" finished-at="2025-12-15T16:36:41 IST" duration-ms="8383">
     <groups>
     </groups>
-    <test started-at="2025-12-11T12:48:10 IST" name="Default test" finished-at="2025-12-11T12:48:12 IST" duration-ms="2325">
-      <class name="Authorization.API_Key">
-        <test-method signature="apiKey_QP()[pri:0, instance:Authorization.API_Key@2794eab6]" started-at="2025-12-11T12:48:10 IST" name="apiKey_QP" finished-at="2025-12-11T12:48:11 IST" duration-ms="1390" status="PASS">
+    <test started-at="2025-12-15T16:36:32 IST" name="Default test" finished-at="2025-12-15T16:36:41 IST" duration-ms="8383">
+      <class name="A_RestAssured_RahulShetty.JIRA_API.JIRAcrud">
+        <test-method signature="CreateIssue()[pri:0, instance:A_RestAssured_RahulShetty.JIRA_API.JIRAcrud@2794eab6]" started-at="2025-12-15T16:36:33 IST" name="CreateIssue" finished-at="2025-12-15T16:36:41 IST" duration-ms="8280" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- apiKey_QP -->
-        <test-method signature="apiKey_RH()[pri:0, instance:Authorization.API_Key@2794eab6]" started-at="2025-12-11T12:48:11 IST" name="apiKey_RH" finished-at="2025-12-11T12:48:12 IST" duration-ms="890" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- apiKey_RH -->
-      </class> <!-- Authorization.API_Key -->
+        </test-method> <!-- CreateIssue -->
+      </class> <!-- A_RestAssured_RahulShetty.JIRA_API.JIRAcrud -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
