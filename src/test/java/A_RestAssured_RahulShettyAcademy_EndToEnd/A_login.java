@@ -80,7 +80,7 @@ public class A_login {
 	String message=CreateOrderResponse.getMessage();
 	System.out.println("------Order id : "+orders);
 	System.out.println("------ProductOrderid : "+productOrderId);
-	System.out.println("------message : "+message);
+	System.out.println("------Message : "+message);
 
 	// DeleteOrder
 	
