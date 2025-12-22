@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="A_RestAssured_RahulShetty.JIRA_API.JIRAcrud">
+      <class name="A_RestAssured_RahulShettyAcademy_EndToEnd.A_login">
         <methods>
-          <include name="CreateIssue"/>
+          <include name="logIn"/>
         </methods>
-      </class> <!-- A_RestAssured_RahulShetty.JIRA_API.JIRAcrud -->
+      </class> <!-- A_RestAssured_RahulShettyAcademy_EndToEnd.A_login -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
