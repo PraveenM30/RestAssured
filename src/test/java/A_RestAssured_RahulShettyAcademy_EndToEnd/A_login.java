@@ -17,7 +17,7 @@ import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.specification.RequestSpecification;
 
-public class A_login {
+public class A_logIn {
 
 	@Test
 	public void logIn() {
